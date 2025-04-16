@@ -25,6 +25,9 @@ spec:
   loadBalancerSourceRanges:
   {{ toYaml .Values.service.loadBalancerSourceRanges | nindent 2 }}
   {{- end }}
+  {{- if .Values.service.loadBalancerClass }}
+  loadBalancerClass: {{ .Values.service.loadBalancerClass }}
+  {{- end }}
 {{- end}}
   selector:
     {{- include "nginx-gateway.selectorLabels" . | nindent 4 }}

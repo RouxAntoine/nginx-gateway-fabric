@@ -336,6 +336,9 @@ service:
   # -- The IP ranges (CIDR) that are allowed to access the load balancer. Requires service.type set to LoadBalancer.
   loadBalancerSourceRanges: []
 
+  # -- The loadbalancer class name of controller which would handle this service of type loadbalancer. Requires service.type set to LoadBalancer.
+  loadBalancerClass: ""
+
   # @schema
   # type: array
   # items:
